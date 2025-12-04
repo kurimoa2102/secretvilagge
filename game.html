@@ -1,0 +1,62 @@
+<!-- game.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習ツール選択 - 協同学習支援</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .game-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .game-card {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .game-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .game-card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .game-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>学習ツール選択</h1>
+        <p>目的や学習内容に合わせて、適切なツールを選択してください。</p>
+        <div class="game-menu">
+            <div class="game-card">
+                <a href="taiko.html">
+                    <h3>リズム感・集中力向上トレーニング</h3>
+                    <p>（太鼓の達人シミュレーター）</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="scratch_online.html">
+                    <h3>リアルタイム共同作業シミュレーション</h3>
+                    <p>（クラウド変数利用プログラム）</p>
+                </a>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">トップページに戻る</a>
+    </div>
+</body>
+</html>
