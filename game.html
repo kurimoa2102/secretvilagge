@@ -1,0 +1,42 @@
+<!-- game.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習ツール - 協同学習支援</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>学習ツール：本日の討議テーマ決定</h2>
+        <p>グループディスカッションのテーマをランダムに選出します。ボタンを押して、本日の学習テーマを決定してください。</p>
+        <button onclick="getTheme()">テーマを決定</button>
+        <h3 id="themeResult" style="text-align: center; margin-top: 20px; padding: 15px; background-color: #f0f8ff; border-left: 5px solid #007bff;">ここにテーマが表示されます</h3>
+
+        <a href="index.html" class="back-link">トップページに戻る</a>
+    </div>
+
+    <script>
+        const themes = [
+            "自然環境とSDGsの関係性について",
+            "地域社会における共生のあり方",
+            "災害時におけるリーダーシップの重要性",
+            "チームビルディングにおけるコミュニケーション",
+            "持続可能な社会の実現に向けた考察",
+            "研修で学んだことの事後活動への応用"
+        ];
+
+        function getTheme() {
+            const resultElement = document.getElementById('themeResult');
+            resultElement.textContent = "選出中...";
+
+            setTimeout(() => {
+                const randomIndex = Math.floor(Math.random() * themes.length);
+                const selectedTheme = themes[randomIndex];
+                resultElement.textContent = `テーマ：『${selectedTheme}』`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
